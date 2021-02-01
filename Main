@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Enter a string:");
+        Scanner in = new Scanner(System.in);
+        String input = in.nextLine();
+        System.out.println(checkPalindrome(input));
+    }
+
+    public static boolean checkPalindrome(String str) {
+        String reverse = new StringBuilder(str).reverse().toString();
+
+        //checks for palindrome
+        if (str.equals(reverse)){
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
